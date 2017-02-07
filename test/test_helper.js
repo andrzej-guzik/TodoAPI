@@ -8,3 +8,10 @@ before(done => {
 			console.warn("Warning: ", error);
 		});
 });
+
+beforeEach(done => {
+	const {todos} = mongoose.connection.collections;
+	todos.drop()
+		.then(() => done())
+		.catch(() => done());
+});

@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "node \"index.js\"",
+    "start": "node index.js",
 	"test": "set \"NODE_ENV=test\" && nodemon --exec \"mocha --recursive -R min\""
+  },
+  "engines": {
+	"node": "6.9.4"
   },
   "author": "",
   "license": "ISC",
